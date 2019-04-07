@@ -1,0 +1,29 @@
+execve("./hello", ["./hello"], 0x7ffd0db09e78 /* 34 vars */) = 0 <0.000472>
+brk(NULL)                               = 0x5596b7337000 <0.000142>
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory) <0.000131>
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory) <0.000126>
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 <0.000068>
+fstat(3, {st_mode=S_IFREG|0644, st_size=107142, ...}) = 0 <0.000020>
+mmap(NULL, 107142, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f1a2e363000 <0.000027>
+close(3)                                = 0 <0.000019>
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory) <0.000022>
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3 <0.000025>
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\34\2\0\0\0\0\0"..., 832) = 832 <0.000022>
+fstat(3, {st_mode=S_IFREG|0755, st_size=2030544, ...}) = 0 <0.000018>
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f1a2e361000 <0.000022>
+mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f1a2dd66000 <0.000024>
+mprotect(0x7f1a2df4d000, 2097152, PROT_NONE) = 0 <0.000034>
+mmap(0x7f1a2e14d000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f1a2e14d000 <0.000031>
+mmap(0x7f1a2e153000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f1a2e153000 <0.000024>
+close(3)                                = 0 <0.000017>
+arch_prctl(ARCH_SET_FS, 0x7f1a2e3624c0) = 0 <0.000018>
+mprotect(0x7f1a2e14d000, 16384, PROT_READ) = 0 <0.000027>
+mprotect(0x5596b6282000, 4096, PROT_READ) = 0 <0.000022>
+mprotect(0x7f1a2e37e000, 4096, PROT_READ) = 0 <0.000025>
+munmap(0x7f1a2e363000, 107142)          = 0 <0.000055>
+fstat(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(136, 0), ...}) = 0 <0.000019>
+brk(NULL)                               = 0x5596b7337000 <0.000018>
+brk(0x5596b7358000)                     = 0x5596b7358000 <0.000020>
+write(1, "hello world\n", 12)           = 12 <0.000035>
+exit_group(0)                           = ?
++++ exited with 0 +++
